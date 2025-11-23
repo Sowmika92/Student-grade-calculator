@@ -1,0 +1,21 @@
+def get_grade(marks):
+    if marks >= 90:
+        return "A", "Awesome work!"
+    elif marks >= 75:
+        return "B", "Great job!"
+    elif marks >= 60:
+        return "C", "Good effort, keep it up!"
+    elif marks >= 40:
+        return "D", "Passed, but you can do better!"
+    else:
+        return "F", "Fail. Don't be discouraged; strive to improve!"
+
+try:
+    marks = float(input("Enter student's marks (0-100): "))
+    if 0 <= marks <= 100:
+        grade, message = get_grade(marks)
+        print(f"Grade: {grade} - {message}")
+    else:
+        print("Please enter marks between 0 and 100.")
+except ValueError:
+    print("Invalid input. Please enter a numeric value.")
